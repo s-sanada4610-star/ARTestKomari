@@ -2,22 +2,22 @@
 <html>
 <head>
   <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
-<head>
+</head>
 <body style="margin: 0; overflow: hidden">
 
   <a-scene embedded arjs>
-    <!-- あなたのpattファイル（仮に "pattern-ARマーカー.patt" とします） -->
     <a-marker type="pattern" url="pattern-ARマーカー.patt" id="marker">
-      <a-box color="red"><a-box>
-    <a-marker>
-  <a-scene>
+      <a-box color="red"></a-box>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
 
   <script>
     const marker = document.querySelector("#marker");
 
     marker.addEventListener("markerFound", () => {
-        location.href = "file:///C:/Users/shios/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/2D%E5%90%88%E5%90%8C%E6%BC%94%E7%BF%92/WebGLBuild/index.html";
+        location.href = "index.html"; // GitHub Pagesではローカルパスは使えません
     });
-  <script>
-<body>
-<html>
+  </script>
+</body>
+</html>
