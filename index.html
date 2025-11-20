@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden">
+
+  <a-scene embedded arjs>
+    <!-- あなたのpattファイル（仮に "pattern-ARマーカー.patt" とします） -->
+    <a-marker type="pattern" url="pattern-ARマーカー.patt" id="marker">
+      <a-box color="red"></a-box>
+    </a-marker>
+  </a-scene>
+
+  <script>
+    const marker = document.querySelector("#marker");
+
+    marker.addEventListener("markerFound", () => {
+        location.href = "https://あなたのUnityWebGLのURL";
+    });
+  </script>
+</body>
+</html>
